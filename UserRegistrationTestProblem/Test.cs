@@ -43,5 +43,19 @@ namespace UserTestMS
                 return "Invalid";
             }
         }
+        public string ValidEmail(string mail)
+        {
+            string emailid = "^[a-z]{3}[.][a-z0-9]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$"; //Expression for Email Id format
+            Regex regex = new Regex(emailid);
+
+            if (regex.IsMatch(mail))
+            {
+                return "Valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+        }
     }
 }

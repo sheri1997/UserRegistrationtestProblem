@@ -38,5 +38,22 @@ namespace UserTestMS
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void TestGmail()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "xyz@gmail.com";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
