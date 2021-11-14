@@ -88,4 +88,22 @@ namespace UserTestMS
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void TestUpperCase()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "#ShrePa01";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+    }
 }

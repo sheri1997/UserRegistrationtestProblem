@@ -84,5 +84,18 @@ namespace UserTestMS
                 return "Valid";
             }
         }
+        public static string UpperCase(string pass)
+        {
+            string pwd = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+            Regex regex = new Regex(pwd);
+            if (regex.IsMatch(pass))
+            {
+                return "Valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+        }
     }
 }
