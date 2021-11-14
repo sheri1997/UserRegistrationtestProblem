@@ -123,5 +123,21 @@ namespace UserTestMS
                 return "Invalid";
             }
         }
+        public static void sampleEmail(string[] name)
+        {
+            string email = "^[a-zA-Z0-9]+[+-._]{0,1}[a-zA-Z0-9]*[+-._]?[a-zA-Z0-9]*[@][a-zA-Z0-9]+[.][a-zA-Z0-9]{2,3}([.]?[a-zA-Z]{2,3}){0,1}$";
+            Regex regex = new Regex(email);//Expression for Validating regular exp email different format.
+            foreach (var word in name)
+            {
+                if (regex.IsMatch(word))
+                {
+                    Console.WriteLine(word + " is valid.");
+                }
+                else
+                {
+                    Console.WriteLine(word + " is invalid.");
+                }
+            }
+        }
     }
 }
