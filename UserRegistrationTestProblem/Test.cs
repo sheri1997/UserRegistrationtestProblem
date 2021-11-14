@@ -110,5 +110,18 @@ namespace UserTestMS
                 return "Invalid";
             }
         }
+        public string SpecialCharcter(string pass)
+        {
+            string pwd = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{10,}$";
+            Regex regex = new Regex(pwd);
+            if (regex.IsMatch(pass))
+            {
+                return "Valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+        }
     }
 }

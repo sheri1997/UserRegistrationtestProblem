@@ -122,5 +122,22 @@ namespace UserTestMS
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void TestSpecialCharcter()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "@ShrePa01";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
