@@ -57,5 +57,18 @@ namespace UserTestMS
                 return "Invalid";
             }
         }
-    }
+        public static void mobileNumber(string number)
+        {
+            string mobileNumber = "^[0-9]{1,2}[ ]{1}[0-9]{10}$";//Expression for Validating mobileFormating
+            Regex regex = new Regex(mobileNumber);
+
+            if (regex.IsMatch(number))
+            {
+                Console.WriteLine(number + "Valid");
+            }
+            else
+            {
+                Console.WriteLine(number + "InValid");
+            }
+        }
 }
