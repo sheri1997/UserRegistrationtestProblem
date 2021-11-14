@@ -55,5 +55,22 @@ namespace UserTestMS
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void TestMobileNo()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "9454977489";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
