@@ -22,5 +22,21 @@ namespace UserTestMS
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void TestLastName()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "Pan";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
