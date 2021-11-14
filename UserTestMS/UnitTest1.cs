@@ -105,5 +105,22 @@ namespace UserTestMS
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void TestOneNumeric()
+        {
+            //AAA Methodology
+
+            //Arrange
+            string message = "@ShreP01";
+            string expected = "valid";
+
+            //Act
+            Test testing = new Test(message);
+            string actual = testing.validFirstName();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }

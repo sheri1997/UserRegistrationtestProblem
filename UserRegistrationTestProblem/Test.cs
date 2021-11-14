@@ -97,5 +97,18 @@ namespace UserTestMS
                 return "Invalid";
             }
         }
+        public static string OneNumeric(string pass)
+        {
+            string pwd = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";
+            Regex regex = new Regex(pwd);
+            if (regex.IsMatch(pass))
+            {
+                return "Valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+        }
     }
 }
